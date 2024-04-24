@@ -1,0 +1,146 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  padding-left: 40px;
+  padding-right: 40px;
+  overflow-x: hidden;
+}
+
+.select-container {
+  margin-top: 20px;
+}
+
+.breed-select {
+  width: 150px;
+  margin-bottom: 10px;
+  padding: 4px;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.cat-info {
+  display: flex;
+  gap: 30px;
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.title,
+.text,
+.subtitle {
+  color: #22343d;
+  font-family: sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.text {
+  font-size: 16px;
+}
+
+.subtitle {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.loader {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.error {
+  font-weight: 16px;
+  font-weight: 500;
+  color: red;
+}
+
+.is-hidden {
+  display: none;
+}
+
+img {
+  width: 400px;
+  height: 300px;
+  object-fit: cover;
+}
+
+.loader {
+  width: 48px;
+  height: 48px;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+.loader {
+  width: 48px;
+  height: 48px;
+  border: 3px dotted #FFF;
+  border-style: solid solid dotted dotted;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  box-sizing: border-box;
+  animation: rotation 2s linear infinite;
+}
+
+.loader::after {
+  content: '';
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  border: 3px dotted #FF3D00;
+  border-style: solid solid dotted;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  animation: rotationBack 1s linear infinite;
+  transform-origin: center center;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotationBack {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(-360deg);
+  }
+}
